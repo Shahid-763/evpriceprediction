@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Price Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<header class="main-header">
+    <div class="nav-container">
+        <a href="/" class="brand">
+            <span class="brand-icon">⚡</span>
+            <span>EV Price Intelligence</span>
+        </a>
+
+        <nav class="navigation">
+            <a href="/">Home</a>
+            <a href="/city-comparison">New EV Comparison</a>
+            <a href="/used-city-comparison">Used EV Comparison</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-container">
+
+    <section class="prediction-page-intro">
+        <div class="section-heading">
+            <span class="section-label">PRICE ESTIMATION</span>
+            <h1 id="page-title">EV Price Prediction</h1>
+
+            <p id="page-description">
+                Enter your vehicle details to estimate its price.
+            </p>
+        </div>
+    </section>
+
+    <section class="prediction-section"
+             id="prediction-form"
+             style="display:block;">
+
+        <div class="prediction-panel">
+
+            <h2 id="form-title">Vehicle Details</h2>
+
+            <form id="ev-form">
+
+                <!-- NEW EV FIELDS -->
+
+                <div id="new-fields">
+
+                    <label>Vehicle Model</label>
+                    <select id="new-model" required>
+                        <option value="">Select Vehicle Model</option>
+                    </select>
+
+                    <label>Vehicle Variant</label>
+                    <select id="new-variant" required disabled>
+                        <option value="">Select Variant</option>
+                    </select>
+
+                    <label>City</label>
+                    <select id="new-city" required disabled>
+                        <option value="">Select City</option>
+                    </select>
+
+                    <label>Ex-showroom Price (₹)</label>
+                    <input type="number"
+                           id="ex_showroom"
+                           placeholder="Example: 1600000"
+                           min="1"
+                           step="any"
+                           required>
+
+                </div>
+
+                <!-- USED EV FIELDS -->
+
+                <div id="used-fields" style="display:none;">
+
+                    <label>Vehicle Brand</label>
+                    <select id="used-brand" required>
+                        <option value="">Select Brand</option>
+                    </select>
+
+                    <label>Vehicle Model</label>
+                    <select id="used-model" required disabled>
+                        <option value="">Select Model</option>
+                    </select>
+
+                    <label>Vehicle Variant</label>
+                    <select id="used-variant" required disabled>
+                        <option value="">Select Variant</option>
+                    </select>
+
+                    <label>City</label>
+                    <select id="used-city" required disabled>
+                        <option value="">Select City</option>
+                    </select>
+
+                    <label>Vehicle Age (Years)</label>
+                    <input type="number"
+                           id="age"
+                           placeholder="Example: 2"
+                           min="0"
+                           step="any"
+                           required>
+
+                    <label>Distance Driven (KM)</label>
+                    <input type="number"
+                           id="km"
+                           placeholder="Example: 25000"
+                           min="0"
+                           step="any"
+                           required>
+
+                </div>
+
+                <button type="submit" class="calculate-btn">
+                    Calculate EV Price →
+                </button>
+
+            </form>
+
+            <div id="result"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <h3>⚡ EV Price Intelligence</h3>
+    <p>Machine Learning Based Electric Vehicle Price Prediction System</p>
+    <p>Academic Project | India</p>
+</footer>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EV City Price Comparison</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>EV City Price Comparison</h1>
+
+        <p>
+            Compare actual recorded on-road prices of the same electric
+            vehicle across available Indian cities.
+        </p>
+
+        <form id="comparison-form">
+
+            <label>Vehicle Model</label>
+            <select id="compare-model" required>
+                <option value="">Loading models...</option>
+            </select>
+
+            <label>Vehicle Variant</label>
+            <select id="compare-variant" required disabled>
+                <option value="">Select a model first</option>
+            </select>
+
+            <button type="submit">
+                Compare City Prices
+            </button>
+
+        </form>
+
+        <div id="comparison-result"></div>
+
+        <br>
+
+        <a href="/">Back to Dashboard</a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='city_comparison.js') }}"></script>
+
+</body>
+</html>

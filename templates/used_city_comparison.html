@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Used EV City Price Comparison</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Used EV City Price Comparison</h1>
+
+        <p>
+            Compare actual advertised listing prices of the same
+            used electric car across available Indian cities.
+        </p>
+
+        <form id="used-comparison-form">
+
+            <label>Vehicle Brand</label>
+            <input type="text"
+                   id="used-brand"
+                   placeholder="Example: Tata"
+                   required>
+
+            <label>Vehicle Model</label>
+            <input type="text"
+                   id="used-model"
+                   placeholder="Example: Nexon EV"
+                   required>
+
+            <label>Vehicle Variant</label>
+            <input type="text"
+                   id="used-variant"
+                   placeholder="Example: Creative Plus 30.0 kWh"
+                   required>
+
+            <button type="submit">
+                Compare City Prices
+            </button>
+
+        </form>
+
+        <div id="used-comparison-result"></div>
+
+        <br>
+
+        <a href="/">Back to Dashboard</a>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='used_city_comparison.js') }}"></script>
+
+</body>
+</html>

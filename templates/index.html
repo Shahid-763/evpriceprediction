@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EV Price Intelligence | Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="/" class="brand">
+                <span class="brand-icon">⚡</span>
+                <span>EV Price Intelligence</span>
+            </a>
+
+            <nav class="navigation">
+                <a href="/" class="active">Home</a>
+                <a href="/city-comparison" target="_blank">New EV Comparison</a>
+                <a href="/used-city-comparison" target="_blank">Used EV Comparison</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <!-- Welcome Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <span class="hero-label">SMART EV ANALYTICS PLATFORM</span>
+
+                <h1>
+                    Understand EV Prices.<br>
+                    Make Smarter Decisions.
+                </h1>
+
+                <p>
+                    Predict electric vehicle prices, estimate resale values
+                    and compare EV prices across Indian cities using
+                    Machine Learning.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#modules" class="primary-btn">
+                        Explore Modules →
+                    </a>
+
+                    <a href="/city-comparison"
+                       target="_blank"
+                       class="secondary-btn">
+                        Compare City Prices
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-symbol">⚡</div>
+                <h2>EV Price Intelligence</h2>
+                <p>AI-powered price estimation</p>
+
+                <div class="hero-tags">
+                    <span>New EV</span>
+                    <span>Used EV</span>
+                    <span>City Analysis</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Modules -->
+        <section id="modules" class="modules-section">
+
+            <div class="section-heading">
+                <span class="section-label">YOUR WORKSPACE</span>
+                <h2>Explore Dashboard Modules</h2>
+                <p>Select a module to start analyzing electric vehicle prices.</p>
+            </div>
+
+            <div class="module-grid">
+
+                <!-- New EV Prediction -->
+                <article class="module-card">
+                    <div class="module-icon">🚘</div>
+                    <span class="module-number">01</span>
+
+                    <h3>New EV Prediction</h3>
+
+                    <p>
+                        Estimate the on-road price of a new electric car
+                        using vehicle specifications and road tax.
+                    </p>
+
+                    <a href="/prediction?type=new"
+                       target="_blank"
+                       class="module-btn">
+                        Predict New EV Price →
+                    </a>
+                </article>
+
+                <!-- Used EV Prediction -->
+                <article class="module-card">
+                    <div class="module-icon">🔋</div>
+                    <span class="module-number">02</span>
+
+                    <h3>Used EV Prediction</h3>
+
+                    <p>
+                        Estimate resale value based on vehicle age,
+                        kilometres driven and battery health.
+                    </p>
+
+                    <a href="/prediction?type=used"
+                       target="_blank"
+                       class="module-btn">
+                        Predict Resale Price →
+                    </a>
+                </article>
+
+                <!-- New EV City Comparison -->
+                <article class="module-card">
+                    <div class="module-icon">📍</div>
+                    <span class="module-number">03</span>
+
+                    <h3>New EV City Comparison</h3>
+
+                    <p>
+                        Compare the predicted on-road price of the same
+                        new EV across Indian cities.
+                    </p>
+
+                    <a href="/city-comparison"
+                       target="_blank"
+                       class="module-btn">
+                        Compare New EV Prices →
+                    </a>
+                </article>
+
+                <!-- Used EV City Comparison -->
+                <article class="module-card">
+                    <div class="module-icon">📊</div>
+                    <span class="module-number">04</span>
+
+                    <h3>Used EV City Comparison</h3>
+
+                    <p>
+                        Discover which city has the highest predicted
+                        resale value for your used electric car.
+                    </p>
+
+                    <a href="/used-city-comparison"
+                       target="_blank"
+                       class="module-btn">
+                        Compare Resale Values →
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>⚡ EV Price Intelligence</h3>
+        <p>Machine Learning Based Electric Vehicle Price Prediction System</p>
+        <p>Academic Project | India</p>
+    </footer>
+
+</body>
+</html>
